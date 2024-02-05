@@ -1,0 +1,43 @@
+.movie-search-content h1{
+    padding-top: 140px;
+    margin-left: 40px;
+    color: white;
+}
+
+.searchRes{
+    padding: 50px;
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr); */
+    flex-wrap: wrap;
+    gap: 100px;
+    width: 100%;
+}
+
+.search-movie-item{
+    cursor: pointer;
+    width: 300px;
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 20px; */
+    border: 2px solid white;
+    background-color: white;
+    /* transition: .5s ease; */
+}
+
+.search-thumbnail{
+    height: 430px;
+    width: 100%;
+    pointer-events: none;
+}
+
+.search-m-title{
+    pointer-events: none;
+    font-size: 25px;
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}

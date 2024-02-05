@@ -1,0 +1,241 @@
+.bg-img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.heading{
+    position: relative;
+    top: 20px;
+    margin-top: -100%;
+    text-align: center;
+    width: 100%;
+    font-size: 45px;
+    font-style: italic;
+    color: white;
+    transition: .5s ease;
+}
+
+
+.grid-main{
+    /* margin-top: 60px; */
+    width: 90%;
+    height: 500px;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    /* top: 120px; */
+    transition: 1s ease;
+    opacity: 0;
+}
+
+.grid-box{
+    width: 450px;
+    height: 100%;
+    position: absolute;
+    border-radius: 24px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    transition: .5s ease;
+    /* align-items: center; */
+}
+
+.grid-box.active{
+  box-shadow: -18px 0px 20px -18px rgba(0,0,0,0.8), 18px 0px 20px -18px rgba(0,0,0,0.8);
+}
+
+
+.grid-box.active .btnss{
+    display: flex;
+}
+
+.proj-details{
+    margin-top: 70px;
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+.proj-title{
+    font-size: 36px;
+}
+
+.proj-descr{
+    margin-top: 50px;
+    font-size: 18px;
+    padding: 0 20px;
+}
+
+.btnss{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+    display: none;
+    transition: 2s ease;
+}
+
+.btnss button{
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    width: 130px;
+}
+
+.left-arrow, .right-arrow{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 5;
+    transition: .5s ease;
+}
+
+.left-arrow{
+    left: 80px;
+}
+
+.right-arrow{
+    right: 80px;
+}
+
+.stacklist{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+}
+
+
+
+@media (max-width:1023px) {
+
+    .heading{
+        padding: 0 50px;
+        font-size: 40px;
+    }
+
+    .grid-main{
+        overflow: hidden;
+    }
+
+    .grid-box{
+        width: 385px;
+    }
+
+    .left-arrow{
+        left: 30px;
+    }
+
+    .right-arrow{
+        right: 30px;
+    }
+
+}
+
+@media (max-width: 760px) {
+    /* .grid-main{
+        margin-top: 70px;
+    } */
+
+    .left-arrow, .right-arrow{
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .left-arrow{
+        left: 35%;
+        top: calc(100% - 110px);;
+    }
+    .right-arrow{
+        right: 35%;
+        top:  calc(100% - 110px);;
+    }
+
+    .grid-box{
+        max-width: 100%;
+    }
+    
+    .grid-box.active{
+        box-shadow: none;
+    }
+
+    .grid-box:not(.active){
+        filter: brightness(.4);
+    }
+}
+
+@media (max-width: 450px){
+    .left-arrow{
+        left: 35%;
+        top: 90%;
+    }
+    .right-arrow{
+        right: 35%;   
+        top: 90%;
+    }
+
+    .heading{
+        font-size: 30px;
+        /* margin-top: -50px; */
+    }
+
+    .grid-main{
+        height: 360px;
+        margin-top: -20px;
+    }
+
+    .proj-details{
+        margin-top: 10px;
+        padding: 20px;
+    }
+
+    .btnss{
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+    }
+
+    .stacklist{
+        right: 20px;
+        padding: 10px;
+    }
+    
+}
